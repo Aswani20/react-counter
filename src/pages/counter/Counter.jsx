@@ -1,5 +1,5 @@
-import Increase from "../component/increase";
-import Decrease from "../component/decrease";
+import Increase from "../../component/increase";
+import Decrease from "../../component/decrease";
 import { useState } from "react";
 const Counter = () => {
     const [counter,setcounter]=useState(0);

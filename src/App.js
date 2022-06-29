@@ -1,30 +1,30 @@
 import { useState } from "react";
-import Counter from "./pages/counter";
+import Counter from "./pages/counter/Counter";
+import Home from "./pages/home";
+import About from "./pages/about/About";
+import Shop from "./pages/shop/Shop";
+import {BrowserRouter, Route ,Routes} from 'react-router-dom'
+import NavbarComponent from "./component/navbar/Navbar";
+import Product from "./pages/shop/Product";
+import NotFound from "./pages/notfound/NotFound"
 
 
 function App() {
-  // const [counter, setCounter] = useState(0);
-  // const increase = () => {
-  //   setCounter((count) => count + 1);
-  // };
-  // const decrease = () => {
-  //   if (counter > 0) {
-  //     setCounter((count) => count - 1);
-  //   }
-  // };
+
   return (
     <div className="counter text-center">
-      {/* <h1>Counter</h1>
-      <span className="counterValue">{counter}</span>
-      <div className="buttons">
-        <button className="increaseBtn btn btn-success m-5" onClick={increase}>
-          +
-        </button>
-        <button className="decreaseBtn btn btn-danger m-5" onClick={decrease}>
-          -
-        </button>
-      </div> */}
-      <Counter/>
+      <BrowserRouter>
+        <NavbarComponent />
+        <Routes>
+          <Route path="/" element={<Home/>} />
+          <Route path="/counter" element={<Counter/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/shop" element={ <Shop/>} />
+          <Route path="/shop/:id" element={ <Product/>} />
+          <Route path="*" element={ <NotFound/>} />
+        </Routes>
+      </BrowserRouter>
+    
     </div>
   );
 }
