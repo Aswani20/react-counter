@@ -11,6 +11,7 @@ const NavbarComponent = () => {
             <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
             <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
+            <Nav.Link as={Link} to="/todo">To Do</Nav.Link>
           </Nav>
         </Container>
       </Navbar>
