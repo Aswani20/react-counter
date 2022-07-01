@@ -14,7 +14,6 @@ const TodoForm = ({ addTodo }) => {
   return (
     <div>
       <h3 className="text-muted mb-4">Add a TODO</h3>
-
       <form onSubmit={handleSubmission}>
         Title <br />
         <input
