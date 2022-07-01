@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Card, Button ,Spinner} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../redux/features/shopSlice";
+import './style.css'
 
 const Shop = () => {
 
@@ -28,21 +29,20 @@ const Shop = () => {
 
   return (
     <div>
-      <h1 className="my-4">Shop</h1>
       {
         !loading
         ?
         <div className="container d-flex flex-wrap justify-content-between my-5">
         {products.map((item, index) => {
           return (
-            <Link to={`/shop/${item.id}`} key={index} className="vol-3">
-              <Card style={{ width: "18rem" }} className="d-flex col-3">
-                <Card.Img variant="top" src={item.image} />
-                <Card.Body>
+            <Link to={`/shop/${item.id}`} key={index} className="vol-3 link">
+              <Card className="card d-flex col-3 m-3">
+                <Card.Img variant="top" src={item.image} className="image" />
+                <Card.Body className="cardBody">
                   <Card.Title>{item.title}</Card.Title>
                   <Card.Text>{item.category}</Card.Text>
                   <Card.Text>{item.price}$</Card.Text>
-                  <Button variant="primary">Go somewhere</Button>
+                  <Button variant="primary" className="h">Add to Card</Button>
                 </Card.Body>
               </Card>
             </Link>
@@ -50,7 +50,7 @@ const Shop = () => {
         })}
       </div>
       :
-      <Spinner animation="border" />
+      <Spinner animation="border" className="m-5" />
 
       }
 

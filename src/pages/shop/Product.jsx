@@ -19,7 +19,6 @@ const Product = () => {
 
   return (
     <div>
-      <div className="m-5">Product</div>
         <div className="d-flex justify-content-center m-5">
           <Card style={{ width: "18rem" }} className="d-flex col-3">
             <Card.Img variant="top" src={image} />
@@ -31,7 +30,7 @@ const Product = () => {
               <hr />
               <Card.Text>{category}</Card.Text>
               <Card.Text>{productDetails.price}$</Card.Text>
-              <Button variant="primary">Go somewhere</Button>
+              {/* <Button variant="primary">Go somewhere</Button> */}
             </Card.Body>
           </Card>
         </div>
