@@ -1,16 +1,18 @@
 import { useForm, Controller } from "react-hook-form";
 import ReactSelect from "react-select";
-
+import { Link } from "react-router-dom";
 const Register = () => {
   const {
     register,
     handleSubmit,
     control,
     formState: { errors },
+    reset
   } = useForm();
 
   const onSubmit = (data) => {
     console.log("data", data);
+    reset();
   };
 
   console.log(errors);
@@ -217,9 +219,9 @@ const Register = () => {
 
                 <p className="text-center text-muted mt-5 mb-0">
                   Have already an account?{" "}
-                  <a href="#!" className="fw-bold text-body">
+                  <Link to="/login" className="fw-bold text-body">
                     <u>Login here</u>
-                  </a>
+                  </Link>
                 </p>
               </form>
             </div>
