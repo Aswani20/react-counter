@@ -7,6 +7,7 @@ import NavbarComponent from "./component/navbar/Navbar";
 import Product from "./pages/shop/Product";
 import NotFound from "./pages/notfound/NotFound"
 import Todo from "./pages/todo/Todo"
+import Register from "./pages/register/register";
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/shop" element={ <Shop/>} />
           <Route path="/shop/:id" element={ <Product/>} />
           <Route path="/todo" element={ <Todo/>} />
+          <Route path="/register" element={ <Register/>} />
           <Route path="*" element={ <NotFound/>} />
         </Routes>
       </BrowserRouter>

@@ -9,9 +9,10 @@ const NavbarComponent = () => {
           <Nav className="ms-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
             <Nav.Link as={Link} to="/shop">E-Commerce</Nav.Link>
-            <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
             <Nav.Link as={Link} to="/about">About</Nav.Link>
             <Nav.Link as={Link} to="/todo">To Do</Nav.Link>
+            <Nav.Link as={Link} to="/counter">Counter</Nav.Link>
+            <Nav.Link as={Link} to="/register">Register</Nav.Link>
           </Nav>
         </Container>
       </Navbar>

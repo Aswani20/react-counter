@@ -36,7 +36,7 @@ const Shop = () => {
         {products.map((item, index) => {
           return (
             <Link to={`/shop/${item.id}`} key={index} className="vol-3 link">
-              <Card className="card d-flex col-3 m-3">
+              <Card className="card d-flex  m-3">
                 <Card.Img variant="top" src={item.image} className="image" />
                 <Card.Body className="cardBody">
                   <Card.Title>{item.title}</Card.Title>
