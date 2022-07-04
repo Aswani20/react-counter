@@ -3,7 +3,7 @@ const TodoList = ({ todos, deleteTodo }) => {
     todos && todos.length > 0 ? (
       todos.map((todo, i) => {
         return (
-          <div className="d-flex align-items-center justify-content-between border border rounded-2 m-4 bg-secondary text-white" key={i}>
+          <div className="w-50 m-auto d-flex align-items-center justify-content-between border border rounded-2 m-4 bg-secondary text-white" key={i}>
             <ul className="my-2 ">
               <li className=" d-flex">
                 <div className="text">

@@ -21,7 +21,7 @@ const TodoForm = ({ addTodo }) => {
           name="title"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
-          className="mb-4 w-100 border rounded-3 "
+          className="mb-4 w-50  border rounded-3 "
         />
         <br />
         Content <br />
@@ -29,7 +29,7 @@ const TodoForm = ({ addTodo }) => {
           name="content"
           value={content}
           onChange={(e) => setContent(e.target.value)}
-          className="w-100 border rounded-3 "
+          className="w-50 border rounded-3 "
         ></textarea>
         <br />
         <button className="my-4 btn btn-primary btn-sm px-4" type="submit">
